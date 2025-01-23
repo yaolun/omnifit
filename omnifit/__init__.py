@@ -3,7 +3,7 @@
 # Packages may add whatever they like to this file, but
 # should keep this content at the top.
 # ----------------------------------------------------------------------------
-from ._astropy_init import *   # noqa
+# from ._astropy_init import *   # noqa
 # ----------------------------------------------------------------------------
 
 # Enforce Python version check during package import.
@@ -21,9 +21,10 @@ class UnsupportedPythonError(Exception):
 
 
 if LooseVersion(sys.version) < LooseVersion(__minimum_python_version__):
-    raise UnsupportedPythonError("omnifit does not support Python < {}"
-                                 .format(__minimum_python_version__))
+    raise UnsupportedPythonError(
+        "omnifit does not support Python < {}".format(__minimum_python_version__)
+    )
 
-if not _ASTROPY_SETUP_:   # noqa
-    # For egg_info test builds to pass, put package imports here.
-    pass
+# if not _ASTROPY_SETUP_:   # noqa
+#     # For egg_info test builds to pass, put package imports here.
+#     pass
